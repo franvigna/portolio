@@ -9,14 +9,25 @@
   // Colores
   --primary: #2563eb;
   --primary-dark: #1e40af;
+  --primary-light: #60a5fa;
   --secondary: #9333ea;
+  --secondary-dark: #7e22ce;
   --accent: #10b981;
+  --accent-dark: #059669;
   
   --text: #1f2937;
   --text-light: #6b7280;
+  --text-lighter: #9ca3af;
+  
+  // Fondos mejorados
   --bg: #ffffff;
-  --bg-secondary: #f9fafb;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --bg-gradient-start: #f0f9ff;
+  --bg-gradient-end: #e0f2fe;
+  
   --border: #e5e7eb;
+  --border-light: #f3f4f6;
   
   // Espaciados
   --container: 1200px;
@@ -30,18 +41,27 @@
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
 }
 
 body {
-  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   line-height: 1.6;
   color: var(--text);
   background: var(--bg);
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 main {
   min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    var(--bg-gradient-start) 0%,
+    var(--bg) 50%,
+    var(--bg-secondary) 100%
+  );
 }
 
 a {
@@ -52,9 +72,35 @@ a {
 button {
   font-family: inherit;
   cursor: pointer;
+  border: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   font-weight: 700;
+  color: var(--text);
+}
+
+// Utilidad para contenedores con patrón de puntos
+.dotted-background {
+  background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+// Scrollbar personalizado
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
 }
