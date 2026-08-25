@@ -1,0 +1,9 @@
+.content {
+  @media (min-width: 1025px) {
+    margin-left: var(--sidebar-width);
+  }
+
+  @media (max-width: 1024px) {
+    padding-top: 4rem;
+  }
+}

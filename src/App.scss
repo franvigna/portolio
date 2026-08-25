@@ -7,41 +7,99 @@
 
 :root {
   // Colores
-  --primary: #2563eb;
-  --primary-dark: #1e40af;
-  --primary-light: #60a5fa;
-  --secondary: #9333ea;
-  --secondary-dark: #7e22ce;
+  --primary: #3B4EFF;
+  --primary-rgb: 59, 78, 255;
+  --primary-dark: #2C3ACC;
+  --primary-light: #EEF0FF;
   --accent: #10b981;
   --accent-dark: #059669;
-  
-  --text: #1f2937;
-  --text-light: #6b7280;
+
+  --text: #0D1117;
+  --text-light: #6B7280;
   --text-lighter: #9ca3af;
-  
-  // Fondos mejorados
-  --bg: #ffffff;
-  --bg-secondary: #f8fafc;
-  --bg-tertiary: #f1f5f9;
-  --bg-gradient-start: #f0f9ff;
-  --bg-gradient-end: #e0f2fe;
-  
-  --border: #e5e7eb;
+
+  // Fondos
+  --bg: #F7F8FC;
+  --bg-secondary: #F0F1F8;
+  --bg-tertiary: #e9ebf5;
+  --surface: #FFFFFF;
+
+  --border: #E5E7EB;
   --border-light: #f3f4f6;
-  
+
+  // Estados
+  --success-bg: #dcfce7;
+  --success-text: #166534;
+  --success-border: #86efac;
+  --error-bg: #fee2e2;
+  --error-text: #991b1b;
+  --error-border: #fca5a5;
+
   // Espaciados
-  --container: 1200px;
+  --container: 1440px;
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 2rem;
   --spacing-lg: 4rem;
   --spacing-xl: 6rem;
-  
+
   // Sombras
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+
+  // Sidebar (usa la misma jerarquía en ambos temas)
+  --sidebar-width: 260px;
+
+  // Terminal (Education) — en light es la única "isla oscura" del sitio
+  --terminal-bar: #1e1e2e;
+  --terminal-bg: #12121c;
+  --terminal-text: #d1d5db;
+  --terminal-text-dim: #9ca3af;
+  --terminal-accent: #a5b4fc;
+  --terminal-track: #2a2a3c;
+}
+
+[data-theme='dark'] {
+  --primary: #5B6EFF;
+  --primary-rgb: 91, 110, 255;
+  --primary-dark: #3B4EFF;
+  --primary-light: rgba(91, 110, 255, 0.16);
+  --accent: #98c379;
+  --accent-dark: #7fa863;
+
+  --text: #ABB2BF;
+  --text-light: #7f848e;
+  --text-lighter: #5c6370;
+
+  --bg: #282C34;
+  --bg-secondary: #21252B;
+  --bg-tertiary: #2c313a;
+  --surface: #2c313a;
+
+  --border: #3a3f4b;
+  --border-light: #333842;
+
+  --success-bg: rgba(152, 195, 121, 0.15);
+  --success-text: #98c379;
+  --success-border: rgba(152, 195, 121, 0.4);
+  --error-bg: rgba(224, 108, 117, 0.15);
+  --error-text: #e06c75;
+  --error-border: rgba(224, 108, 117, 0.4);
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.2);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.35);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.4);
+
+  // Terminal se funde con el fondo general en dark mode, ya no es una isla
+  --terminal-bar: #1a1d23;
+  --terminal-bg: #1a1d23;
+  --terminal-text: var(--text);
+  --terminal-text-dim: var(--text-light);
+  --terminal-accent: #61afef;
+  --terminal-track: #181a1f;
 }
 
 body {
@@ -49,19 +107,20 @@ body {
   line-height: 1.6;
   color: var(--text);
   background: var(--bg);
-  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    transition: none;
+  }
 }
 
 main {
   min-height: 100vh;
-  background: linear-gradient(
-    180deg,
-    var(--bg-gradient-start) 0%,
-    var(--bg) 50%,
-    var(--bg-secondary) 100%
-  );
+  background: var(--bg);
 }
 
 a {
@@ -76,6 +135,7 @@ button {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
   line-height: 1.2;
   font-weight: 700;
   color: var(--text);
@@ -83,7 +143,7 @@ h1, h2, h3, h4, h5, h6 {
 
 // Utilidad para contenedores con patrón de puntos
 .dotted-background {
-  background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
+  background-image: radial-gradient(circle, var(--border) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 

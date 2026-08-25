@@ -1,6 +1,6 @@
 .contact {
   padding: 6rem 2rem;
-  background: white;
+  background: var(--surface);
 }
 
 .container {
@@ -8,7 +8,17 @@
   margin: 0 auto;
 }
 
+.sectionLabel {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
 .title {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(2rem, 4vw, 2.5rem);
   text-align: center;
   margin-bottom: 1rem;
@@ -32,7 +42,7 @@
   display: flex;
   gap: 2rem;
   padding: 3rem;
-  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
   border-radius: 16px;
   border: 2px solid var(--accent);
   margin-bottom: 3rem;
@@ -44,8 +54,20 @@
 }
 
 .whatsappIcon {
-  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
   flex-shrink: 0;
+  background: var(--accent);
+  color: white;
+  border-radius: 16px;
+
+  svg {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .whatsappContent {
@@ -65,6 +87,9 @@
 }
 
 .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
   padding: 0.375rem 0.75rem;
   background: var(--accent);
   color: white;
@@ -73,6 +98,11 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+.badgeIcon {
+  width: 14px;
+  height: 14px;
 }
 
 .whatsappDescription {
@@ -86,10 +116,20 @@
   margin-bottom: 1.5rem;
 
   li {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
     padding: 0.5rem 0;
     color: var(--text);
     font-size: 0.95rem;
   }
+}
+
+.featureIcon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--accent);
 }
 
 .whatsappButton {
@@ -102,7 +142,7 @@
   transition: all 0.3s;
 
   &:hover {
-    background: #059669;
+    background: var(--accent-dark);
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
   }
@@ -126,7 +166,7 @@
 
   span {
     position: relative;
-    background: white;
+    background: var(--surface);
     padding: 0 1rem;
     color: var(--text-light);
     font-size: 0.875rem;
@@ -167,8 +207,20 @@
 }
 
 .infoIcon {
-  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
   flex-shrink: 0;
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: 12px;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
 }
 
 .infoContent {
@@ -210,7 +262,7 @@
 
 .socialLink {
   padding: 0.5rem 1rem;
-  background: white;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 6px;
   font-size: 0.875rem;
@@ -224,24 +276,27 @@
   }
 }
 
-// Tip Box
-.tip {
-  padding: 1.5rem;
-  background: linear-gradient(135deg, #fef3c7, #fde68a);
+.cvButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--primary-light);
+  color: var(--primary);
   border-radius: 12px;
-  border: 2px solid #fbbf24;
+  font-weight: 600;
+  transition: all 0.3s;
 
-  h4 {
-    font-size: 1rem;
-    margin-bottom: 0.75rem;
-    color: var(--text);
+  &:hover {
+    background: var(--primary);
+    color: white;
   }
+}
 
-  p {
-    font-size: 0.875rem;
-    color: var(--text);
-    line-height: 1.6;
-  }
+.cvIcon {
+  width: 18px;
+  height: 18px;
 }
 
 // Contact Form
@@ -283,12 +338,13 @@
     font-family: inherit;
     font-size: 1rem;
     transition: all 0.3s;
-    background: white;
+    background: var(--surface);
+    color: var(--text);
 
     &:focus {
       outline: none;
       border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+      box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
     }
 
     &::placeholder {
@@ -323,25 +379,6 @@
     opacity: 0.6;
     cursor: not-allowed;
   }
-}
-
-.status {
-  padding: 1rem;
-  border-radius: 8px;
-  font-weight: 500;
-  text-align: center;
-}
-
-.statusSuccess {
-  background: #dcfce7;
-  color: #166534;
-  border: 1px solid #86efac;
-}
-
-.statusError {
-  background: #fee2e2;
-  color: #991b1b;
-  border: 1px solid #fca5a5;
 }
 
 @media (max-width: 768px) {

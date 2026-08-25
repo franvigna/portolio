@@ -1,23 +1,13 @@
 import styles from './Footer.module.scss'
+import { CONTACT } from '../config/constants'
+import { useLanguage } from '../hooks/useLanguage'
+import { dict } from '../config/i18n'
+import { MessageIcon, MailIcon, PinIcon, GithubIcon, LinkedinIcon } from './icons/Icon'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
-
-  const info = {
-    name: "Francisco Vignardel",
-    role: "Desarrollador Full Stack",
-    email: "vignardel.francisco@gmail.com",
-    whatsapp: "5491138658887",
-    location: "Buenos Aires, Argentina",
-    github: "https://github.com/franvigna",
-    linkedin: "https://www.linkedin.com/in/francisco-vignardel/"
-  }
-
-  const quickLinks = [
-    { label: 'Sobre Mí', href: '#about' },
-    { label: 'Proyectos', href: '#projects' },
-    { label: 'Contacto', href: '#contact' },
-  ]
+  const { language } = useLanguage()
+  const t = dict[language].footer
 
   return (
     <footer className={styles.footer}>
@@ -28,69 +18,58 @@ export default function Footer() {
           <div className={styles.brand}>
             <div className={styles.logo}>
               <span className={styles.logoIcon}>FV</span>
-              <span className={styles.logoText}>{info.name}</span>
+              <span className={styles.logoText}>{CONTACT.name}</span>
             </div>
-            <p className={styles.tagline}>{info.role}</p>
-            <p className={styles.description}>
-              Creo sitios web que hacen crecer negocios. Disponible para proyectos freelance.
-            </p>
+            <p className={styles.tagline}>{t.tagline}</p>
+            <p className={styles.description}>{t.description}</p>
 
             {/* CTA destacado */}
             <a
-              href={`https://wa.me/${info.whatsapp}?text=${encodeURIComponent("Hola Francisco, quiero consultar")}`}
+              href={CONTACT.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.ctaButton}
             >
-              💬 Hablemos por WhatsApp
+              <MessageIcon className={styles.ctaIcon} />
+              {t.ctaWhatsapp}
             </a>
-          </div>
-
-          {/* Quick Links */}
-          <div className={styles.section}>
-            <h3 className={styles.sectionTitle}>Enlaces Rápidos</h3>
-            <nav className={styles.links}>
-              {quickLinks.map((link) => (
-                <a key={link.href} href={link.href} className={styles.link}>
-                  {link.label}
-                </a>
-              ))}
-            </nav>
           </div>
 
           {/* Contact Info */}
           <div className={styles.section}>
-            <h3 className={styles.sectionTitle}>Contacto</h3>
+            <h3 className={styles.sectionTitle}>{t.contactTitle}</h3>
             <div className={styles.contactInfo}>
-              <a href={`mailto:${info.email}`} className={styles.contactLink}>
-                📧 {info.email}
+              <a href={`mailto:${CONTACT.email}`} className={styles.contactLink}>
+                <MailIcon className={styles.contactIcon} />
+                {CONTACT.email}
               </a>
               <p className={styles.contactText}>
-                📍 {info.location}
+                <PinIcon className={styles.contactIcon} />
+                {CONTACT.location}
               </p>
-              <p className={styles.contactNote}>
-                Trabajo remoto con toda Argentina y LATAM
-              </p>
+              <p className={styles.contactNote}>{t.locationNote}</p>
             </div>
 
             {/* Social Links */}
             <div className={styles.social}>
               <a
-                href={info.github}
+                href={CONTACT.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialLink}
                 aria-label="GitHub"
               >
+                <GithubIcon className={styles.socialIcon} />
                 GitHub
               </a>
               <a
-                href={info.linkedin}
+                href={CONTACT.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialLink}
                 aria-label="LinkedIn"
               >
+                <LinkedinIcon className={styles.socialIcon} />
                 LinkedIn
               </a>
             </div>
@@ -99,12 +78,8 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className={styles.bottom}>
-          <p className={styles.copyright}>
-            © {currentYear} {info.name}. Todos los derechos reservados.
-          </p>
-          <p className={styles.tech}>
-            Hecho con React + Vite + TypeScript
-          </p>
+          <p className={styles.copyright}>{t.copyright(currentYear, CONTACT.name)}</p>
+          <p className={styles.tech}>{t.tech}</p>
         </div>
       </div>
     </footer>

@@ -1,51 +1,64 @@
 import styles from './Hero.module.scss'
+import { CONTACT } from '../config/constants'
+import { useLanguage } from '../hooks/useLanguage'
+import { dict } from '../config/i18n'
+import profile from '../assets/profile.webp'
+import AnchorLink from './AnchorLink'
 
 export default function Hero() {
+  const { language } = useLanguage()
+  const t = dict[language].hero
+
   return (
     <section id="hero" className={styles.hero}>
       <div className={styles.container}>
-        <div className={styles.badge}>
-          <span className={styles.badgeDot}></span>
-          Disponible para nuevos proyectos
+        <div className={styles.copy}>
+          <div className={styles.role}>{t.role}</div>
+
+          <h1 className={styles.title}>Francisco Vignardel</h1>
+          <p className={styles.nickname}>{t.nickname} <span>Cisco</span></p>
+
+          <p className={styles.subtitle}>
+            {t.subtitleLine1}
+            <br />
+            {t.subtitleLine2}
+          </p>
+
+          <div className={styles.ctas}>
+            <a
+              href={CONTACT.cvPath[language]}
+              download
+              className={styles.ctaPrimary}
+            >
+              {t.ctaCv}
+            </a>
+            <AnchorLink href="#contact" className={styles.ctaSecondary}>
+              {t.ctaContact}
+            </AnchorLink>
+            <a
+              href={CONTACT.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.ctaTertiary}
+            >
+              {t.ctaGithub}
+            </a>
+          </div>
         </div>
 
-        <h1 className={styles.title}>
-          Hola, soy Francisco Vignardel
-          <br />
-          <span className={styles.gradient}>Desarrollador Full Stack</span>
-        </h1>
-
-        <p className={styles.subtitle}>
-          Creo sitios web que hacen crecer negocios. Trabajo en YPF y ayudo a PyMEs a tener presencia online profesional.
-        </p>
-
-        <div className={styles.ctas}>
-          <a
-            href="https://wa.me/5491138658887"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.ctaPrimary}
-          >
-            Hablemos por WhatsApp
-          </a>
-          <a href="#projects" className={styles.ctaSecondary}>
-            Ver Proyectos
-          </a>
-        </div>
-
-        <div className={styles.stats}>
-          <div className={styles.stat}>
-            <span className={styles.statValue}>8+</span>
-            <span className={styles.statLabel}>Proyectos</span>
-          </div>
-          <div className={styles.stat}>
-            <span className={styles.statValue}>2+</span>
-            <span className={styles.statLabel}>Años Pro</span>
-          </div>
-          <div className={styles.stat}>
-            <span className={styles.statValue}>100%</span>
-            <span className={styles.statLabel}>Satisfacción</span>
-          </div>
+        <div className={styles.portrait}>
+          <div className={styles.portraitRing} aria-hidden="true" />
+          <img
+            src={profile}
+            alt="Francisco Vignardel"
+            className={styles.portraitImage}
+            width={480}
+            height={480}
+          />
+          <span className={styles.portraitBadge}>
+            <span className={styles.portraitBadgeDot} aria-hidden="true" />
+            {t.available}
+          </span>
         </div>
       </div>
     </section>

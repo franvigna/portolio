@@ -1,7 +1,13 @@
 {
-  "name": "portfolio",
+  "name": "francisco-vignardel-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Portfolio personal de Francisco Vignardel, Software Developer.",
+  "author": "Francisco Vignardel",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/franvigna/portolio.git"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,8 +17,7 @@
   },
   "dependencies": {
     "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "react-scroll": "^1.9.3"
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
