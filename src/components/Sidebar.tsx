@@ -5,7 +5,7 @@ import { useTheme } from '../hooks/useTheme'
 import { useLanguage } from '../hooks/useLanguage'
 import { dict } from '../config/i18n'
 import AnchorLink from './AnchorLink'
-import { CloseIcon, MenuIcon, FileCodeIcon, FolderIcon, SunIcon, MoonIcon, MessageIcon, FlagArIcon, FlagUsIcon } from './icons/Icon'
+import { CloseIcon, MenuIcon, FileCodeIcon, FolderIcon, SunIcon, MoonIcon, MessageIcon, FlagArIcon, FlagUsIcon, LaptopIcon } from './icons/Icon'
 
 const FILE_IDS = ['hero', 'about', 'experience', 'education', 'skills', 'projects', 'contact'] as const
 
@@ -85,8 +85,8 @@ export default function Sidebar() {
       <aside className={styles.sidebar}>
         <div className={styles.brand}>
           <AnchorLink href="#hero" className={styles.logo}>
-            <span className={styles.logoIcon}>FV</span>
-            <span className={styles.logoText}>Francisco</span>
+            <span className={styles.logoIcon}><LaptopIcon className={styles.logoIconSvg} /></span>
+            <span className={styles.logoText}>Cisco</span>
           </AnchorLink>
           {controls}
         </div>
@@ -106,8 +106,8 @@ export default function Sidebar() {
 
       <div className={styles.mobileBar}>
         <AnchorLink href="#hero" className={styles.mobileLogo}>
-          <span className={styles.logoIcon}>FV</span>
-          <span className={styles.logoText}>Francisco</span>
+          <span className={styles.logoIcon}><LaptopIcon className={styles.logoIconSvg} /></span>
+          <span className={styles.logoText}>Cisco</span>
         </AnchorLink>
         <button
           onClick={() => setIsMobileOpen(!isMobileOpen)}
@@ -121,8 +121,8 @@ export default function Sidebar() {
       {isMobileOpen && (
         <div className={styles.mobileOverlay}>
           <div className={styles.mobileBrand}>
-            <span className={styles.logoIcon}>FV</span>
-            <span className={styles.logoText}>Francisco</span>
+            <span className={styles.logoIcon}><LaptopIcon className={styles.logoIconSvg} /></span>
+            <span className={styles.logoText}>Cisco</span>
             {controls}
           </div>
           <div className={styles.explorer}>{tree}</div>

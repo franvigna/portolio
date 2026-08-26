@@ -19,10 +19,6 @@ export default function About() {
         <span className={styles.sectionLabel}>{t.sectionLabel}</span>
         <h2 className={styles.title}>{t.title}</h2>
 
-        <div className={styles.story}>
-          <p>{t.story}</p>
-        </div>
-
         <PersonalGraph />
 
         <div className={styles.stats}>

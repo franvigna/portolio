@@ -4,6 +4,7 @@ import { useLanguage } from '../hooks/useLanguage'
 import { dict } from '../config/i18n'
 import profile from '../assets/profile.webp'
 import AnchorLink from './AnchorLink'
+import TypingText from './TypingText'
 
 export default function Hero() {
   const { language } = useLanguage()
@@ -13,7 +14,9 @@ export default function Hero() {
     <section id="hero" className={styles.hero}>
       <div className={styles.container}>
         <div className={styles.copy}>
-          <div className={styles.role}>{t.role}</div>
+          <div className={styles.role}>
+            <TypingText text={t.role} />
+          </div>
 
           <h1 className={styles.title}>Francisco Vignardel</h1>
           <p className={styles.nickname}>{t.nickname} <span>Cisco</span></p>

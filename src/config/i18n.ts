@@ -19,8 +19,8 @@ export const dict = {
     hero: {
       role: '{ Software Developer }',
       nickname: 'también conocido como',
-      subtitleLine1: 'Desarrollo aplicaciones empresariales en Buenos Aires.',
-      subtitleLine2: 'Actualmente en YPF S.A. React, TypeScript, Azure.',
+      subtitleLine1: 'Estudiante avanzado de Ingeniería en Informática.',
+      subtitleLine2: 'Desarrollo aplicaciones enterprise en YPF S.A.',
       ctaCv: 'Descargar CV',
       ctaContact: 'Contacto',
       ctaGithub: 'Ver GitHub',
@@ -29,7 +29,6 @@ export const dict = {
     about: {
       sectionLabel: '// about',
       title: 'Sobre Mí',
-      story: 'Estudiante avanzado de Ingeniería en Informática con sólida experiencia en desarrollo web y soluciones empresariales. Actualmente desarrollando aplicaciones enterprise para una empresa líder del sector energético. Experiencia en arquitecturas frontend complejas, integración con servicios cloud y entornos ágiles. En búsqueda de roles donde aportar experiencia en soluciones enterprise y seguir creciendo técnicamente.',
       stats: [
         { value: '4+', label: 'Años de experiencia' },
         { value: '63%', label: 'Carrera completada' },
@@ -85,9 +84,9 @@ export const dict = {
       hint: '// click en un nodo',
       nodes: {
         core: {
-          label: 'Francisco',
+          label: 'Cisco',
           title: 'Software Developer',
-          text: 'Soy Software Developer con foco en aplicaciones enterprise: React, TypeScript, arquitecturas frontend escalables e integración con servicios cloud (Azure). Estudio Ingeniería en Informática en la UNLaM y busco un rol full-time donde seguir creciendo técnicamente. Todo lo que sigue (hábitos, matemática, Linux, aprendizaje) es lo que está por detrás de ese perfil.',
+          text: 'Estudiante avanzado de Ingeniería en Informática (UNLaM) con foco en aplicaciones enterprise: React, TypeScript, arquitecturas frontend escalables e integración con servicios cloud (Azure). Actualmente desarrollo aplicaciones para una empresa líder del sector energético, en entornos ágiles. Estoy en búsqueda constante de mejora y excelencia, tanto profesional como personal. Para conocer más de mí, tocá alguno de los nodos conexos.',
         },
         habits: {
           label: 'Hábitos',
@@ -291,8 +290,8 @@ export const dict = {
     hero: {
       role: '{ Software Developer }',
       nickname: 'aka',
-      subtitleLine1: 'I build enterprise applications out of Buenos Aires.',
-      subtitleLine2: 'Currently at YPF S.A. React, TypeScript, Azure.',
+      subtitleLine1: 'Advanced Computer Engineering student.',
+      subtitleLine2: 'Building enterprise applications at YPF S.A.',
       ctaCv: 'Download CV',
       ctaContact: 'Contact',
       ctaGithub: 'View GitHub',
@@ -301,7 +300,6 @@ export const dict = {
     about: {
       sectionLabel: '// about',
       title: 'About Me',
-      story: 'Advanced Computer Engineering student with solid experience in web development and enterprise solutions. Currently building enterprise applications for a leading company in the energy sector. Experienced in complex frontend architectures, cloud service integration, and agile environments. Looking for roles where I can bring enterprise solution experience and keep growing technically.',
       stats: [
         { value: '4+', label: 'Years of experience' },
         { value: '63%', label: 'Degree completed' },
@@ -357,9 +355,9 @@ export const dict = {
       hint: '// click a node',
       nodes: {
         core: {
-          label: 'Francisco',
+          label: 'Cisco',
           title: 'Software Developer',
-          text: "The node everything else connects to. I'm a Software Developer focused on enterprise applications: React, TypeScript, scalable frontend architectures, and cloud service integration (Azure). I'm studying Computer Engineering at UNLaM and looking for a full-time role to keep growing technically. Everything that follows (habits, math, Linux, learning) is what stands behind that profile.",
+          text: "Advanced Computer Engineering student (UNLaM) focused on enterprise applications: React, TypeScript, scalable frontend architectures, and cloud service integration (Azure). Currently building applications for a leading company in the energy sector, in agile environments. Always looking to keep improving, professionally and personally. To learn more about me, tap one of the connected nodes.",
         },
         habits: {
           label: 'Habits',

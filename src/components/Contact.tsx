@@ -10,6 +10,8 @@ import {
   PinIcon,
   LinkIcon,
   FileIcon,
+  GithubIcon,
+  LinkedinIcon,
 } from './icons/Icon'
 
 export default function Contact() {
@@ -110,6 +112,7 @@ export default function Contact() {
                       rel="noopener noreferrer"
                       className={styles.socialLink}
                     >
+                      <GithubIcon className={styles.socialIcon} />
                       GitHub
                     </a>
                     <a
@@ -118,6 +121,7 @@ export default function Contact() {
                       rel="noopener noreferrer"
                       className={styles.socialLink}
                     >
+                      <LinkedinIcon className={styles.socialIcon} />
                       LinkedIn
                     </a>
                   </div>

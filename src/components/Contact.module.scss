@@ -261,10 +261,14 @@
 }
 
 .socialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   padding: 0.5rem 1rem;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 6px;
+  color: var(--text);
   font-size: 0.875rem;
   font-weight: 600;
   transition: all 0.3s;
@@ -272,8 +276,14 @@
   &:hover {
     border-color: var(--primary);
     background: var(--primary);
-    color: white !important;
+    color: white;
   }
+}
+
+.socialIcon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 .cvButton {

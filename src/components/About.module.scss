@@ -41,22 +41,6 @@
   color: var(--text);
 }
 
-.story {
-  max-width: 1000px;
-  margin: 0 auto 4rem;
-  padding: 2.5rem 3rem;
-  background: var(--bg-secondary);
-  border-radius: 16px;
-  border-left: 4px solid var(--primary);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-
-  p {
-    font-size: 1.125rem;
-    line-height: 1.8;
-    color: var(--text);
-  }
-}
-
 .stats {
   display: flex;
   justify-content: center;

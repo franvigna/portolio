@@ -181,6 +181,15 @@ export function FolderIcon({ className }: IconProps) {
   )
 }
 
+export function LaptopIcon({ className }: IconProps) {
+  return (
+    <svg {...defaultProps} className={className}>
+      <rect x="4" y="4" width="16" height="11" rx="1" />
+      <path d="M2 19h20l-1.5-3h-17L2 19Z" />
+    </svg>
+  )
+}
+
 export function FlagArIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 18" className={className} aria-hidden="true">
