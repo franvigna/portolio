@@ -121,14 +121,6 @@
   transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.narrative {
-  max-width: 760px;
-  margin: 0 auto 3rem;
-  text-align: center;
-  color: var(--text-light);
-  line-height: 1.7;
-}
-
 // Areas — ramas de la carrera, cada una como stack interactivo de materias
 .areas {
   display: grid;

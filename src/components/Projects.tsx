@@ -5,17 +5,17 @@ import { dict } from '../config/i18n'
 import AnchorLink from './AnchorLink'
 import GraphBackground from './GraphBackground'
 
-const REPOS = [
-  'https://github.com/franvigna/portfolio-investing',
-  'https://github.com/franvigna/SistemaRecategorizacion',
-  'https://github.com/franvigna/docker-paso-a-paso',
-  'https://github.com/franvigna/portfolio-nextjs',
+const LINKS: { demo?: string; repo?: string; selfLink?: boolean }[] = [
+  { demo: 'https://informatica-unlam.netlify.app/', repo: 'https://github.com/franvigna/selector-materias' },
+  { demo: 'https://recategorizacion.netlify.app/', repo: 'https://github.com/franvigna/SistemaRecategorizacion' },
+  { repo: 'https://github.com/franvigna/docker-paso-a-paso' },
+  { selfLink: true },
 ]
 
 export default function Projects() {
   const { language } = useLanguage()
   const t = dict[language].projects
-  const projects = t.items.map((item, i) => ({ id: i, repo: REPOS[i], ...item }))
+  const projects = t.items.map((item, i) => ({ id: i, ...item, ...LINKS[i] }))
 
   return (
     <section id="projects" className={styles.projects}>
@@ -38,14 +38,33 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <a
-                  href={project.repo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.projectLink}
-                >
-                  {t.viewOnGithub}
-                </a>
+                <div className={styles.projectLinks}>
+                  {project.selfLink && (
+                    <a href="/" className={styles.projectLink}>
+                      {t.viewDemo}
+                    </a>
+                  )}
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.projectLink}
+                    >
+                      {t.viewDemo}
+                    </a>
+                  )}
+                  {project.repo && (
+                    <a
+                      href={project.repo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${styles.projectLink} ${styles.projectLinkSecondary}`}
+                    >
+                      {t.viewOnGithub}
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           ))}

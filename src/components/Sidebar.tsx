@@ -112,7 +112,7 @@ export default function Sidebar() {
         <button
           onClick={() => setIsMobileOpen(!isMobileOpen)}
           className={styles.mobileToggle}
-          aria-label="Toggle explorer"
+          aria-label={t.toggleMenu}
         >
           {isMobileOpen ? <CloseIcon className={styles.toggleIcon} /> : <MenuIcon className={styles.toggleIcon} />}
         </button>

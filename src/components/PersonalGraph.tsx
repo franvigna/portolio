@@ -15,7 +15,7 @@ const NODE_LAYOUT: NodeLayout[] = [
   { id: 'core', file: 'francisco.tsx', x: 50, y: 50, isCore: true },
   { id: 'habits', file: 'habitos.md', x: 8, y: 10 },
   { id: 'math', file: 'matematica.md', x: 92, y: 10 },
-  { id: 'linux', file: 'linux.md', x: 8, y: 90 },
+  { id: 'linux', file: 'infra.md', x: 8, y: 90 },
   { id: 'growth', file: 'aprendizaje.md', x: 92, y: 90 },
 ]
 

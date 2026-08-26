@@ -33,8 +33,6 @@ export default function Education() {
           </div>
         </div>
 
-        <p className={styles.narrative}>{t.narrative}</p>
-
         <div className={styles.areas}>
           {t.areas.map((area) => (
             <SubjectStack key={area.title} title={area.title} description={area.description} subjects={area.subjects} />

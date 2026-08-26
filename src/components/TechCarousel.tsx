@@ -1,4 +1,6 @@
 import styles from './TechCarousel.module.scss'
+import { useLanguage } from '../hooks/useLanguage'
+import { dict } from '../config/i18n'
 import {
   CIcon, JavaIcon, TypeScriptIcon, PythonIcon, ReactIcon, NextjsIcon, NodejsIcon,
   DockerIcon, KubernetesIcon, BashIcon, PowerShellIcon, AzureIcon, DatabaseIcon, GitIcon, SassIcon,
@@ -25,8 +27,11 @@ const TECHS = [
 const track = [...TECHS, ...TECHS]
 
 export default function TechCarousel() {
+  const { language } = useLanguage()
+  const t = dict[language].skills
+
   return (
-    <section className={styles.carousel} aria-label="Stack de tecnologías">
+    <section className={styles.carousel} aria-label={t.carouselAriaLabel}>
       <div className={styles.viewport}>
         <div className={styles.track}>
           {track.map(({ name, Icon }, i) => (

@@ -93,6 +93,12 @@
   font-weight: 500;
 }
 
+.projectLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
 .projectLink {
   display: inline-flex;
   align-items: center;
@@ -107,6 +113,16 @@
   &:hover {
     background: var(--primary-dark);
     transform: translateX(4px);
+  }
+}
+
+.projectLinkSecondary {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+
+  &:hover {
+    background: var(--primary-light);
   }
 }
 

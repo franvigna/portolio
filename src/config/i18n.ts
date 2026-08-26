@@ -14,6 +14,7 @@ export const dict = {
       themeToggleToLight: 'Cambiar a tema claro',
       themeToggleToDark: 'Cambiar a tema oscuro',
       langToggle: 'Switch to English',
+      toggleMenu: 'Abrir o cerrar el menú',
     },
     hero: {
       role: '{ Software Developer }',
@@ -64,6 +65,7 @@ export const dict = {
             'Creación de aplicaciones con React y Django implementando REST APIs',
             'Desarrollo de interfaces para CRM con enfoque en conversión',
             'Diseño e implementación de componentes interactivos con animaciones y UX/UI',
+            'Trato directo con clientes en planificación de tareas, demos, entregables y elicitación de requerimientos',
           ],
         },
         {
@@ -89,23 +91,23 @@ export const dict = {
         },
         habits: {
           label: 'Hábitos',
-          title: 'Hábitos y mejora constante',
+          title: 'Mi filosofía',
           text: 'Creo que el bienestar se construye, no se manifiesta: se logra actuando todos los días, no esperando que algo pase. Trato de hacer lo que tengo que hacer aunque no tenga ganas (ver las clases antes de la clase, resumir, resolver todos los ejercicios). Si hice mi mejor esfuerzo, confío en el proceso y no me arrepiento del resultado. Lo que más me cuesta y más trabajo es no sentirme mediocre, así que prefiero escuchar críticas y equivocarme a quedarme cómodo.',
         },
         math: {
-          label: 'Matemática',
+          label: 'Lógica',
           title: 'Lógica desde chico',
           text: 'De chico competí en olimpíadas de matemática en la primaria, y en paralelo armé una colección de cubos Rubik (2x2, 3x3, 4x4, megaminx, pyraminx, mirror). No lo sabía en ese momento, pero resolver cubos fue mi primer contacto real con la idea de algoritmo (pasos ordenados que siempre llevan al mismo resultado). Años después la facultad le puso nombre a algo que ya disfrutaba: pensar de forma lógica y resolver problemas.',
         },
         linux: {
-          label: 'Linux',
+          label: 'Infraestructura',
           title: 'Entender el por qué',
-          text: 'Conocí Linux en la facultad y me quedó la curiosidad de entender cómo funcionan las cosas por debajo: servidores, infraestructura, cloud. No me alcanza con que algo funcione, quiero saber por qué funciona así. Esa misma curiosidad es la que me lleva a leer sobre arquitectura de sistemas más allá de lo que un trabajo puntual pide.',
+          text: 'Conocí Linux en la facultad y me quedó la curiosidad de entender cómo funciona todo por debajo: servidores, redes, infraestructura, cloud. No me alcanza con que algo funcione, quiero saber por qué funciona así. Esa misma curiosidad es la que me lleva a leer sobre arquitectura de sistemas más allá de lo que un trabajo puntual pide.',
         },
         growth: {
           label: 'Aprendizaje',
           title: 'Nunca sentirme experto',
-          text: 'Estoy estudiando inglés en Cambridge en paralelo al trabajo y la facultad, y de a poco metiéndome en el mundo de las finanzas e inversión (todavía como novato). Prefiero sentirme inexperto y curioso que seguro de todo (poner mis propias creencias en debate todo el tiempo). Leí bastante sobre esto: Hábitos Atómicos es el libro que más me marcó, también El Club de las 5 AM y El Monje que Vendió su Ferrari.',
+          text: 'Estoy estudiando inglés en Cambridge en paralelo al trabajo y la facultad, y de a poco metiéndome en el mundo de las finanzas e inversión (todavía como novato). Prefiero sentirme inexperto y curioso que seguro de todo (poner mis propias creencias en debate todo el tiempo). Leí bastante sobre esto: Hábitos Atómicos es el libro que más me marcó.',
         },
       },
     },
@@ -117,7 +119,6 @@ export const dict = {
       terminalCareerLine: 'Ingeniería en Informática (UNLaM)',
       terminalProgressLine: (approved: number, total: number, percent: number) =>
         `Progreso: ${approved}/${total} materias aprobadas (${percent}%)`,
-      narrative: 'Cursando el trayecto completo de un ingeniero en informática: desde matemática discreta y análisis matemático hasta arquitectura de computadoras, sistemas operativos, bases de datos, seguridad de la información y gestión de proyectos. Cada materia sumó una capa distinta (algoritmos y estructuras de datos en C, orientación a objetos en Java, redes, concurrencia, testing) que hoy se traduce en cómo diseño, desarrollo y pienso los sistemas que construyo en el día a día.',
       areas: [
         {
           title: 'Desarrollo de Software',
@@ -157,19 +158,19 @@ export const dict = {
           ],
         },
         {
-          title: 'Calidad y Seguridad',
-          description: 'Testing, auditoría y protección de la información.',
-          subjects: [
-            'Principios de Calidad de Software', 'Seguridad de la Información', 'Auditoría y Legislación',
-            'Seguridad Aplicada y Forensia', 'Gestión de la Calidad en Procesos de Sistemas',
-          ],
-        },
-        {
           title: 'Gestión',
           description: 'Proyectos, organizaciones e innovación.',
           subjects: [
             'Introducción a los Proyectos Informáticos', 'Gestión de las Organizaciones',
             'Responsabilidad Social Universitaria', 'Gestión de Proyectos', 'Innovación y Emprendedorismo',
+          ],
+        },
+        {
+          title: 'Calidad y Seguridad',
+          description: 'Testing, auditoría y protección de la información.',
+          subjects: [
+            'Principios de Calidad de Software', 'Seguridad de la Información', 'Auditoría y Legislación',
+            'Seguridad Aplicada y Forensia', 'Gestión de la Calidad en Procesos de Sistemas',
           ],
         },
       ],
@@ -189,6 +190,7 @@ export const dict = {
     skills: {
       sectionLabel: '// skills',
       title: 'Stack Técnico',
+      carouselAriaLabel: 'Stack de tecnologías',
       groups: [
         { title: 'Frontend', tags: ['TypeScript', 'React.js', 'Next.js', 'Node.js', 'SCSS', 'HTML/CSS'] },
         { title: 'Enterprise', tags: ['SharePoint Framework (SPFx)', 'Power Apps', 'Power Automate', 'Azure Functions'] },
@@ -201,15 +203,16 @@ export const dict = {
       title: 'Proyectos',
       subtitle: 'Repos públicos, código real',
       viewOnGithub: 'Ver en GitHub →',
+      viewDemo: 'Ver demo →',
       ctaTitle: '¿Buscás sumar a tu equipo?',
       ctaText: 'Estoy en búsqueda de un rol full-time como developer. Conversemos.',
       ctaWhatsapp: 'Hablemos por WhatsApp',
       ctaContact: 'Enviar Mensaje',
       items: [
         {
-          title: 'portfolio-investing',
-          description: 'Tracker de portfolio de inversiones. Se conecta a APIs públicas de mercado, sigue posiciones y retornos.',
-          tags: ['Next.js', 'TypeScript', 'Turso'],
+          title: 'selector-materias',
+          description: 'Seguimiento de materias y correlatividades de Ingeniería en Informática (UNLaM), con el plan de estudios completo.',
+          tags: ['TypeScript'],
         },
         {
           title: 'SistemaRecategorizacion',
@@ -222,9 +225,9 @@ export const dict = {
           tags: ['Docker', 'Python'],
         },
         {
-          title: 'portfolio-nextjs',
-          description: 'Sitio de portfolio freelance.',
-          tags: ['Next.js', 'TypeScript'],
+          title: 'Este portfolio',
+          description: 'El sitio que estás viendo ahora mismo. React, TypeScript y SCSS, sin librerías de UI externas.',
+          tags: ['React', 'TypeScript', 'SCSS'],
         },
       ],
     },
@@ -283,6 +286,7 @@ export const dict = {
       themeToggleToLight: 'Switch to light theme',
       themeToggleToDark: 'Switch to dark theme',
       langToggle: 'Cambiar a español',
+      toggleMenu: 'Open or close the menu',
     },
     hero: {
       role: '{ Software Developer }',
@@ -333,6 +337,7 @@ export const dict = {
             'Building applications with React and Django implementing REST APIs',
             'Developing CRM interfaces focused on conversion',
             'Designing and implementing interactive components with animations and UX/UI',
+            'Direct client interaction for task planning, demos, deliverables, and requirements gathering',
           ],
         },
         {
@@ -358,23 +363,23 @@ export const dict = {
         },
         habits: {
           label: 'Habits',
-          title: 'Habits and steady improvement',
+          title: 'My philosophy',
           text: "I believe wellbeing is built, not manifested: it comes from acting every day, not waiting for something to happen. I try to do what I have to do even when I don't feel like it (watching the lecture before class, summarizing, solving every exercise). If I gave my best effort, I trust the process and don't regret the outcome. What's hardest for me is not feeling mediocre, so I'd rather hear criticism and get things wrong than stay comfortable.",
         },
         math: {
-          label: 'Math',
+          label: 'Logic',
           title: 'Logic since I was a kid',
           text: "As a kid I competed in math olympiads in primary school, and around the same time I built a Rubik's cube collection (2x2, 3x3, 4x4, megaminx, pyraminx, mirror). I didn't know it then, but solving cubes was my first real contact with the idea of an algorithm (ordered steps that always lead to the same result). Years later, university put a name to something I already enjoyed: thinking logically and solving problems.",
         },
         linux: {
-          label: 'Linux',
+          label: 'Infrastructure',
           title: 'Understanding the why',
-          text: "I discovered Linux at university and it left me with the curiosity to understand how things work underneath: servers, infrastructure, the cloud. It's not enough for something to just work, I want to know why it works that way. That same curiosity is what drives me to read about systems architecture beyond what any given job requires.",
+          text: "I discovered Linux at university and it left me with the curiosity to understand how everything works underneath: servers, networking, infrastructure, the cloud. It's not enough for something to just work, I want to know why it works that way. That same curiosity is what drives me to read about systems architecture beyond what any given job requires.",
         },
         growth: {
           label: 'Learning',
           title: 'Never feeling like an expert',
-          text: "I'm studying English at Cambridge alongside work and university, and slowly getting into finance and investing (still a beginner there). I'd rather feel inexperienced and curious than certain about everything (putting my own beliefs up for debate all the time). I've read a fair amount on this: Atomic Habits is the book that influenced me most, along with The 5 AM Club and The Monk Who Sold His Ferrari.",
+          text: "I'm studying English at Cambridge alongside work and university, and slowly getting into finance and investing (still a beginner there). I'd rather feel inexperienced and curious than certain about everything (putting my own beliefs up for debate all the time). I've read a fair amount on this: Atomic Habits is the book that influenced me most.",
         },
       },
     },
@@ -386,7 +391,6 @@ export const dict = {
       terminalCareerLine: 'Computer Engineering (UNLaM)',
       terminalProgressLine: (approved: number, total: number, percent: number) =>
         `Progress: ${approved}/${total} courses passed (${percent}%)`,
-      narrative: "Working through the full path of a computer engineer: from discrete math and calculus to computer architecture, operating systems, databases, information security, and project management. Every course added a different layer (algorithms and data structures in C, object orientation in Java, networking, concurrency, testing) which today shapes how I design, build, and think about the systems I work on day to day.",
       areas: [
         {
           title: 'Software Development',
@@ -458,6 +462,7 @@ export const dict = {
     skills: {
       sectionLabel: '// skills',
       title: 'Tech Stack',
+      carouselAriaLabel: 'Tech stack',
       groups: [
         { title: 'Frontend', tags: ['TypeScript', 'React.js', 'Next.js', 'Node.js', 'SCSS', 'HTML/CSS'] },
         { title: 'Enterprise', tags: ['SharePoint Framework (SPFx)', 'Power Apps', 'Power Automate', 'Azure Functions'] },
@@ -470,15 +475,16 @@ export const dict = {
       title: 'Projects',
       subtitle: 'Public repos, real code',
       viewOnGithub: 'View on GitHub →',
+      viewDemo: 'View demo →',
       ctaTitle: 'Looking to grow your team?',
       ctaText: "I'm looking for a full-time developer role. Let's talk.",
       ctaWhatsapp: "Let's talk on WhatsApp",
       ctaContact: 'Send a Message',
       items: [
         {
-          title: 'portfolio-investing',
-          description: 'Stock portfolio tracker. Connects to public market APIs, tracks positions and returns.',
-          tags: ['Next.js', 'TypeScript', 'Turso'],
+          title: 'selector-materias',
+          description: 'Course and prerequisite tracker for a Computer Engineering degree (UNLaM), with the full curriculum.',
+          tags: ['TypeScript'],
         },
         {
           title: 'SistemaRecategorizacion',
@@ -491,9 +497,9 @@ export const dict = {
           tags: ['Docker', 'Python'],
         },
         {
-          title: 'portfolio-nextjs',
-          description: 'Freelance portfolio site.',
-          tags: ['Next.js', 'TypeScript'],
+          title: 'This portfolio',
+          description: "The site you're looking at right now. React, TypeScript, and SCSS, no external UI libraries.",
+          tags: ['React', 'TypeScript', 'SCSS'],
         },
       ],
     },
