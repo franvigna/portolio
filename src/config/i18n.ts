@@ -191,10 +191,11 @@ export const dict = {
       title: 'Stack Técnico',
       carouselAriaLabel: 'Stack de tecnologías',
       groups: [
-        { title: 'Frontend', tags: ['TypeScript', 'React.js', 'Next.js', 'Node.js', 'SCSS', 'HTML/CSS'] },
-        { title: 'Enterprise', tags: ['SharePoint Framework (SPFx)', 'Power Apps', 'Power Automate', 'Azure Functions'] },
-        { title: 'Backend & DBs', tags: ['Django', 'REST APIs', 'PostgreSQL', 'MySQL', 'MongoDB', 'SQL'] },
-        { title: 'Tools', tags: ['Git', 'GitHub', 'Docker', 'SCRUM', 'QlikView', 'QlikSense'] },
+        { title: 'Frontend', tags: ['TypeScript', 'React.js', 'Next.js', 'HTML', 'CSS', 'SCSS', 'SharePoint Framework (SPFx)', 'Power Apps', 'Power Automate'] },
+        { title: 'Backend', tags: ['Java', 'C', 'C#', 'Python', 'Node.js', 'Django', 'Spring Boot', '.NET', 'REST APIs', 'Azure Functions'] },
+        { title: 'Infraestructura', tags: ['Docker', 'Kubernetes', 'Bash', 'PowerShell', 'Netlify', 'Vercel', 'Donweb', 'Hostinger'] },
+        { title: 'Bases de Datos', tags: ['PostgreSQL', 'MySQL', 'MongoDB', 'SQL', 'Supabase', 'Firebase'] },
+        { title: 'Tools', tags: ['Git', 'GitHub', 'SCRUM', 'QlikView', 'QlikSense', 'Excel'] },
       ],
     },
     projects: {
@@ -203,10 +204,6 @@ export const dict = {
       subtitle: 'Repos públicos, código real',
       viewOnGithub: 'Ver en GitHub →',
       viewDemo: 'Ver demo →',
-      ctaTitle: '¿Buscás sumar a tu equipo?',
-      ctaText: 'Estoy en búsqueda de un rol full-time como developer. Conversemos.',
-      ctaWhatsapp: 'Hablemos por WhatsApp',
-      ctaContact: 'Enviar Mensaje',
       items: [
         {
           title: 'selector-materias',
@@ -462,10 +459,11 @@ export const dict = {
       title: 'Tech Stack',
       carouselAriaLabel: 'Tech stack',
       groups: [
-        { title: 'Frontend', tags: ['TypeScript', 'React.js', 'Next.js', 'Node.js', 'SCSS', 'HTML/CSS'] },
-        { title: 'Enterprise', tags: ['SharePoint Framework (SPFx)', 'Power Apps', 'Power Automate', 'Azure Functions'] },
-        { title: 'Backend & DBs', tags: ['Django', 'REST APIs', 'PostgreSQL', 'MySQL', 'MongoDB', 'SQL'] },
-        { title: 'Tools', tags: ['Git', 'GitHub', 'Docker', 'SCRUM', 'QlikView', 'QlikSense'] },
+        { title: 'Frontend', tags: ['TypeScript', 'React.js', 'Next.js', 'HTML', 'CSS', 'SCSS', 'SharePoint Framework (SPFx)', 'Power Apps', 'Power Automate'] },
+        { title: 'Backend', tags: ['Java', 'C', 'C#', 'Python', 'Node.js', 'Django', 'Spring Boot', '.NET', 'REST APIs', 'Azure Functions'] },
+        { title: 'Infrastructure', tags: ['Docker', 'Kubernetes', 'Bash', 'PowerShell', 'Netlify', 'Vercel', 'Donweb', 'Hostinger'] },
+        { title: 'Databases', tags: ['PostgreSQL', 'MySQL', 'MongoDB', 'SQL', 'Supabase', 'Firebase'] },
+        { title: 'Tools', tags: ['Git', 'GitHub', 'SCRUM', 'QlikView', 'QlikSense', 'Excel'] },
       ],
     },
     projects: {
@@ -474,10 +472,6 @@ export const dict = {
       subtitle: 'Public repos, real code',
       viewOnGithub: 'View on GitHub →',
       viewDemo: 'View demo →',
-      ctaTitle: 'Looking to grow your team?',
-      ctaText: "I'm looking for a full-time developer role. Let's talk.",
-      ctaWhatsapp: "Let's talk on WhatsApp",
-      ctaContact: 'Send a Message',
       items: [
         {
           title: 'selector-materias',

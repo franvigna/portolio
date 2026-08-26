@@ -75,7 +75,7 @@
 }
 
 .stackItem {
-  --tone: color-mix(in srgb, var(--primary) calc(100% - var(--depth, 0) * 9%), var(--surface) calc(var(--depth, 0) * 9%));
+  --tone: color-mix(in srgb, var(--primary) calc(100% - var(--depth, 0) * 6%), var(--primary-dark) calc(var(--depth, 0) * 6%));
   padding: 0.45rem 0.6rem;
   background: var(--tone);
   color: white;

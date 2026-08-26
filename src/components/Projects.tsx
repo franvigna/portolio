@@ -1,8 +1,6 @@
 import styles from './Projects.module.scss'
-import { CONTACT } from '../config/constants'
 import { useLanguage } from '../hooks/useLanguage'
 import { dict } from '../config/i18n'
-import AnchorLink from './AnchorLink'
 import GraphBackground from './GraphBackground'
 
 const LINKS: { demo?: string; repo?: string; selfLink?: boolean }[] = [
@@ -68,24 +66,6 @@ export default function Projects() {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className={styles.cta}>
-          <h3 className={styles.ctaTitle}>{t.ctaTitle}</h3>
-          <p className={styles.ctaText}>{t.ctaText}</p>
-          <div className={styles.ctaButtons}>
-            <a
-              href={CONTACT.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.ctaPrimary}
-            >
-              {t.ctaWhatsapp}
-            </a>
-            <AnchorLink href="#contact" className={styles.ctaSecondary}>
-              {t.ctaContact}
-            </AnchorLink>
-          </div>
         </div>
       </div>
     </section>

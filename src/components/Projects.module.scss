@@ -126,67 +126,6 @@
   }
 }
 
-// CTA
-.cta {
-  text-align: center;
-  padding: 4rem 2rem;
-  background: var(--surface);
-  border-radius: 16px;
-  border: 2px solid var(--primary);
-}
-
-.ctaTitle {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--text);
-}
-
-.ctaText {
-  color: var(--text-light);
-  font-size: 1.125rem;
-  margin-bottom: 2rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.ctaButtons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 1.5rem;
-}
-
-.ctaPrimary,
-.ctaSecondary {
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: all 0.3s;
-}
-
-.ctaPrimary {
-  background: var(--primary);
-  color: white;
-
-  &:hover {
-    background: var(--primary-dark);
-    transform: translateY(-2px);
-  }
-}
-
-.ctaSecondary {
-  background: var(--surface);
-  color: var(--primary);
-  border: 2px solid var(--primary);
-
-  &:hover {
-    background: var(--primary);
-    color: white;
-  }
-}
-
 @media (max-width: 768px) {
   .projects {
     padding: 4rem 1.5rem;
@@ -194,14 +133,5 @@
 
   .grid {
     grid-template-columns: 1fr;
-  }
-
-  .ctaButtons {
-    flex-direction: column;
-  }
-
-  .ctaPrimary,
-  .ctaSecondary {
-    width: 100%;
   }
 }
